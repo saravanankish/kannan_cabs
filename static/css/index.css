@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+#home {
+  overflow: hidden;
+  background-color: rgb(231, 255, 255);
+}
+
+#container {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+}
+
+#scene {
+  background: url("../images/ce.png") repeat-x center;
+  width: 10000px;
+  height: 150px;
+  animation: slide 20s linear infinite;
+  animation-delay: 4s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+#car {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: move 5s ease;
+}
+
+@keyframes move {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+#tire1,
+#tire2 {
+  animation: rotate 3s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
