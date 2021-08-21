@@ -260,6 +260,12 @@ section {
     display: inline-block;
     color: #fff;
     margin: 20px 0;
+    font-size: 18px;
+  }
+
+  #navbar.active .collapse-navbar li.active a {
+    font-size: 20px;
+    color: dodgerblue;
   }
 }
 
