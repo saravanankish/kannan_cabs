@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lightgrey;
+  border-radius: 200px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -140,6 +150,7 @@ section {
   overflow: hidden;
   background-color: rgb(231, 255, 255);
   z-index: 100;
+  position: relative;
 }
 
 #container {
@@ -200,6 +211,187 @@ section {
   }
 }
 
+#constraint {
+  display: flex;
+  padding: 0 200px;
+  height: 85vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#constraint div h1 {
+  font-size: 50px;
+}
+
+#constraint div #slogan {
+  font-size: 20px;
+}
+
+#tab {
+  width: 450px;
+  box-shadow: 0px 2px 8px #111;
+}
+
+#tab-link {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+}
+
+#tab-link button {
+  background-color: rgb(223, 219, 219);
+  width: calc(450px / 3);
+  border: none;
+  padding: 5px 0px;
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  border: 1px solid grey;
+  transition: all 0.3s;
+}
+
+#tab-link button.active {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+#tab-link button.active:before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: dodgerblue;
+  left: 50%;
+  bottom: -7.5px;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  transition: all 0.3s;
+}
+
+#forms {
+  height: 330px;
+  background-color: #fff;
+}
+
+#one-way-trip {
+  padding: 10px 50px;
+  display: none;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.field-column {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#forms .small-input {
+  width: 160px;
+  height: 30px;
+  text-indent: 3.5px;
+  font-size: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#forms .small-input,
+#forms .big-input:focus {
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+#forms .big-input {
+  margin-left: 20px;
+  width: 250px;
+  height: 30px;
+  text-indent: 10px;
+}
+
+#forms .big-input:focus,
+#forms .small-input:focus {
+  border: 2px solid dodgerblue;
+}
+
+.btn {
+  padding: 6px 25px;
+  margin-top: 15px;
+  background-color: dodgerblue;
+  border: 2px solid dodgerblue;
+  outline: none;
+  color: #fff;
+  font-weight: 400px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: dodgerblue;
+  background-color: transparent;
+  border: 2px solid dodgerblue;
+}
+
+#round-trip {
+  display: none;
+  padding: 10px 30px;
+}
+
+#round-trip .small-input {
+  width: 125px;
+  font-size: 10px;
+}
+
+#round-trip .contact-details {
+  width: 175px;
+}
+
+#local {
+  padding: 10px 50px;
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  background: #111;
+  font-size: 13px;
+  padding: 3px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer .name a {
+  color: DodgerBlue;
+}
+
+@media (max-width: 1200px) {
+  #constraint {
+    flex-direction: column;
+    justify-content: center;
+    height: 110vh;
+  }
+
+  #tab {
+    margin-top: 50px;
+  }
+
+  #home {
+    height: 130vh;
+  }
+}
 @media (max-width: 1024px) {
   #navbar {
     padding: 0 100px;
@@ -267,10 +459,67 @@ section {
     font-size: 20px;
     color: dodgerblue;
   }
+
+  #constraint {
+    padding: 0 20px;
+  }
+
+  #constraint div h1 {
+    font-size: 35px;
+  }
+  #constraint div #slogan {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  #tab {
+    width: 300px;
+  }
+
+  #tab-link button {
+    width: calc(300px / 3);
+    font-size: 10px;
+  }
+
+  #one-way-trip,
+  #round-trip,
+  #local {
+    padding: 10px 12px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  #froms .small-input,
+  #forms .big-input {
+    font-size: 10px;
+  }
+
+  #forms .small-input {
+    width: 135px;
+  }
+
+  #round-trip .row {
+    flex-wrap: wrap;
+  }
+
+  #round-trip .field-column {
+    margin-top: 10px;
+  }
+
+  #forms .big-input {
+    width: 200px;
+  }
 }
 
 @media (max-width: 425px) {
   #navbar {
     padding: 0 20px;
+  }
+
+  footer {
+    font-size: 10px;
   }
 }
