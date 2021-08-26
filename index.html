@@ -26,6 +26,8 @@
         </div>
     </nav>
     <div id="body">
+        <a href="tel:9442624727"><div class="call"><i class="fas fa-phone-alt"></i></div></a>
+        <a href="https://wa.me/919442624747?text=I would like to enquire about a trip" target="_blank"><div class="call whtsapp"><i class="fab fa-whatsapp"></i></div></a>
         <section id="home">
             <div id="constraint">
                 <div>
@@ -42,11 +44,11 @@
                         <form id="local" class="forms">
                             <div class="field">
                                 <p class="label">FROM</p>
-                                <input class="big-input" type="text" placeholder="From Area"/>
+                                <input class="big-input" id="cbe1" type="text" placeholder="From Area" autocomplete="off" list="cbe-area"/>
                             </div>
                             <div class="field">
                                 <p class="label">TO</p>
-                                <input class="big-input" type="text" placeholder="To Area"/>
+                                <input class="big-input" id="cbe2" type="text" placeholder="To Area"  autocomplete="off" list="cbe-area"/>
                             </div>
                             <div class="row">
                                 <div class="field-column">
@@ -75,11 +77,11 @@
                         <form id="one-way-trip" class="forms">
                             <div class="field">
                                 <p class="label">FROM</p>
-                                <input class="big-input" type="text" placeholder="From City"/>
+                                <input class="big-input" id="city" type="text" placeholder="From City"  list="cities" autocomplete="off"/>
                             </div>
                             <div class="field">
                                 <p class="label">TO</p>
-                                <input class="big-input" type="text" placeholder="To City"/>
+                                <input class="big-input" id="city1" type="text" placeholder="To City"  list="cities" autocomplete="off"/>
                             </div>
                             <div class="row">
                                 <div class="field-column">
@@ -88,7 +90,7 @@
                                 </div>
                                 <div class="field-column">
                                     <p class="label">PICK UP AT</p>
-                                    <input class="small-input  time" type="time" />
+                                    <input class="small-input time" type="time" />
                                 </div>
                             </div>
                             <div class="row">
@@ -107,11 +109,11 @@
                         <form id="round-trip" class="forms">
                             <div class="field">
                                 <p class="label">FROM</p>
-                                <input class="big-input" type="text" placeholder="From City"/>
+                                <input class="big-input" id="city2" type="text" placeholder="From City" list="cities" autocomplete="off"/>
                             </div>
                             <div class="field">
                                 <p class="label">TO</p>
-                                <input class="big-input" type="text" placeholder="To City"/>
+                                <input class="big-input" id="city3" type="text" placeholder="To City"  list="cities" autocomplete="off"/>
                             </div>
                             <div class="row">
                                 <div class="field-column">
@@ -139,6 +141,18 @@
                             </div>
                             <input type="button" value="SUBMIT" class="btn"/>
                         </form>
+                        <template id="template">
+                            
+                        </template>
+                        <template id="template-cbe">
+                            
+                        </template>
+                        <datalist id="cities">
+                            
+                        </datalist>
+                        <datalist id="cbe-area">
+
+                        </datalist>
                     </div>
                 </div>
             </div>
@@ -169,7 +183,17 @@
                 </defs>
             </svg>
         </section>
-        <section id="about"></section>
+        <section id="about">
+            <div class="constraint">
+                <h1 class="heading">About Us</h1>
+                <div class="content">
+                    <p>&emsp;&emsp;&emsp;&emsp;<span class="block-text">GEE Travels</span> we provide <span class="block-text"> Best Taxi in Coimbatore City.</span> We have been focused on bringing our customers the best in esteem and quality travel experience. We assure safe and happy journey experience to all of our customers. We provide highly comfortable journey with the lowest price possible. We have well experienced drivers make your rides hassle-free. </p>
+                    <p id="p">&emsp;&emsp;&emsp;&emsp;We provide all kind of cab services which includes <span class="block-text">Local tours</span>, <span class="block-text">Oustation cabs</span>. Rental taxi is available for pick up and drop services. Top places to visit in Coimbatore are Dhyanalinga, Perur Pateeswarar Temple, Marudamalai, Black Thunder, Monkey Falls, Indira Gandhi Wildlife Sanctuary and National Park, Siruvani Waterfalls, Kovai Kondattam, Amaravathi Dam, Singanallur Lake, and Gass Forest Museum. Tourists can enjoy all these touring spots with our taxi service in Coimbatore. To book a cab reach out to us by clicking below <span class="block-text"></span> </p>
+                    <a class="btn link">CONTACT US</a>
+                </div>
+        
+            </div>
+        </section>
         <section id="services"></section>
         <section id="contact"></section>
     </div>
