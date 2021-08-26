@@ -688,6 +688,7 @@ footer .name a {
     font-size: 12.5px;
   }
   #p {
+    margin-top: 10px;
     margin-bottom: 20px;
   }
 }
