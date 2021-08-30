@@ -642,6 +642,7 @@ section {
 #contact-form textarea {
   height: 80px;
   padding-top: 5px;
+  resize: none;
 }
 
 #contact-form .btn {
