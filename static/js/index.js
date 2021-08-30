@@ -144,7 +144,7 @@ function changeActive(id){
 
 $(document).ready(function(){
     $(window).scroll(function(){
-        indicator.style.transform = `translateX(${(100 * (this.scrollY / positionY)) + ((this.scrollY / positionY) * 4)}px)`;
+        // indicator.style.transform = `translateX(${(100 * (this.scrollY / positionY)) + ((this.scrollY / positionY) * 10)}px)`;
         var scale = this.scrollY / positionY;
         if (scale < 0.15){
             if(navbar.classList.contains("sticky")){
@@ -154,24 +154,24 @@ $(document).ready(function(){
             navbar.classList.add("sticky");
         }
 
-        if(scale < 0.8 ){
-            removeActive();
-            document.querySelector(".home").classList.add("active");
-            document.title = "GEE Travels | Home"
-        }
-        else if (scale > 0.85 && scale < 1.8){
-            removeActive();
-            document.querySelector(".about").classList.add("active");
-            document.title = "GEE Travels | About"
-        }else if(scale > 1.9 && scale < 2.8){
-            removeActive();
-            document.querySelector(".services").classList.add("active");
-            document.title = "GEE Travels | Services"
-        }else if(scale > 2.9){
-            removeActive();
-            document.querySelector(".contact").classList.add("active");
-            document.title = "GEE Travels | Contact"
-        }
+        // if(scale < 0.8 ){
+        //     removeActive();
+        //     document.querySelector(".home").classList.add("active");
+        //     document.title = "GEE Travels | Home"
+        // }
+        // else if (scale > 0.85 && scale < 1.8){
+        //     removeActive();
+        //     document.querySelector(".about").classList.add("active");
+        //     document.title = "GEE Travels | About"
+        // }else if(scale > 1.9 && scale < 2.8){
+        //     removeActive();
+        //     document.querySelector(".services").classList.add("active");
+        //     document.title = "GEE Travels | Services"
+        // }else if(scale > 2.9){
+        //     removeActive();
+        //     document.querySelector(".contact").classList.add("active");
+        //     document.title = "GEE Travels | Contact"
+        // }
     });
 
     $('.menu-btn').click(function(){
