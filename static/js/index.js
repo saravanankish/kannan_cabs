@@ -1,6 +1,5 @@
 var positionY = window.innerHeight;
 var width = window.innerWidth;
-console.log(width, positionY);
 var indicator = document.getElementById("indicator");
 var list = document.getElementsByClassName("nav-list");
 var navbar = document.getElementById("navbar");
@@ -43,9 +42,7 @@ window.onload = function () {
     var cbe_template = document.querySelector("#template-cbe").content;
     var datalist = document.querySelector("#cities");
     var template = document.querySelector("#template").content;
-    console.log(cbe_template);
     search.onkeyup =  function handler(event){
-        console.log("hi");
         while(datalist.children.length) datalist.removeChild(datalist.firstChild);
         var inputVal =new RegExp(search.value.trim(), 'i');
         var cloneOpt = template.cloneNode(true);
@@ -53,11 +50,9 @@ window.onload = function () {
             if(inputVal.test(el.textContent) && frag.children.length < 5) frag.appendChild(el);
             return frag;
         }, document.createDocumentFragment());
-        console.log(set);
         datalist.appendChild(set);
     }
     search1.onkeyup =  function handler(event){
-        console.log("hi");
         while(datalist.children.length) datalist.removeChild(datalist.firstChild);
         var inputVal =new RegExp(search1.value.trim(), 'i');
         var cloneOpt = template.cloneNode(true);
@@ -65,11 +60,9 @@ window.onload = function () {
             if(inputVal.test(el.textContent) && frag.children.length < 5) frag.appendChild(el);
             return frag;
         }, document.createDocumentFragment());
-        console.log(set);
         datalist.appendChild(set);
     }
     search2.onkeyup =  function handler(event){
-        console.log("hi");
         while(datalist.children.length) datalist.removeChild(datalist.firstChild);
         var inputVal =new RegExp(search2.value.trim(), 'i');
         var cloneOpt = template.cloneNode(true);
@@ -77,11 +70,9 @@ window.onload = function () {
             if(inputVal.test(el.textContent) && frag.children.length < 5) frag.appendChild(el);
             return frag;
         }, document.createDocumentFragment());
-        console.log(set);
         datalist.appendChild(set);
     }
     search3.onkeyup =  function handler(event){
-        console.log("hi");
         while(datalist.children.length) datalist.removeChild(datalist.firstChild);
         var inputVal =new RegExp(search3.value.trim(), 'i');
         var cloneOpt = template.cloneNode(true);
@@ -89,12 +80,10 @@ window.onload = function () {
             if(inputVal.test(el.textContent) && frag.children.length < 7) frag.appendChild(el);
             return frag;
         }, document.createDocumentFragment());
-        console.log(set);
         datalist.appendChild(set);
     }
 
     cbe1.onkeyup =  function handler(event){
-        console.log("hi");
         while(cbe_data_list.children.length) cbe_data_list.removeChild(cbe_data_list.firstChild);
         var inputVal = new RegExp(cbe1.value.trim(), 'i');
         var cloneOpt = cbe_template.cloneNode(true);
@@ -102,12 +91,10 @@ window.onload = function () {
             if(inputVal.test(el.textContent) && frag.children.length < 7) frag.appendChild(el);
             return frag;
         }, document.createDocumentFragment());
-        console.log(set);
         cbe_data_list.appendChild(set);
     }
 
     cbe2.onkeyup =  function handler(event){
-        console.log("hi");
         while(cbe_data_list.children.length) cbe_data_list.removeChild(cbe_data_list.firstChild);
         var inputVal = new RegExp(cbe2.value.trim(), 'i');
         var cloneOpt = cbe_template.cloneNode(true);
@@ -283,14 +270,6 @@ $(document).ready(function(){
         $('.navbar').toggleClass('active');
         $('.menu-btn i').toggleClass('active');
     });
-});
-
-new ResizeSensor(jQuery("#home"), function(){
-    console.log(document.querySelector("#home").offsetHeight);
-});
-
-new ResizeSensor(jQuery("#services"), function(){
-    console.log(document.querySelector("#services").offsetHeight);
 });
 
 window.onresize = function(){
