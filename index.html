@@ -58,30 +58,30 @@
                         <form id="local" class="forms" method="POST">
                             <div class="field">
                                 <p class="label">FROM</p>
-                                <input class="big-input" id="cbe1" type="text" placeholder="From Area" autocomplete="off" list="cbe-area"/>
+                                <input required class="big-input" id="cbe1" type="text" placeholder="From Area" autocomplete="off" list="cbe-area"/>
                             </div>
                             <div class="field">
                                 <p class="label">TO</p>
-                                <input class="big-input" id="cbe2" type="text" placeholder="To Area"  autocomplete="off" list="cbe-area"/>
+                                <input required class="big-input" id="cbe2" type="text" placeholder="To Area"  autocomplete="off" list="cbe-area"/>
                             </div>
                             <div class="row">
                                 <div class="field-column">
                                     <p class="label">DATE</p>
-                                    <input class="small-input date" type="date" />
+                                    <input required class="small-input date" type="date" />
                                 </div>
                                 <div class="field-column">
                                     <p class="label">PICK UP AT</p>
-                                    <input class="small-input time" type="time" />
+                                    <input required class="small-input time" type="time" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="field-column">
                                     <p class="label">PHONE NUMBER</p>
-                                    <input class="small-input" type="tel" placeholder="eg: 9876543210"/>
+                                    <input required class="small-input" type="tel" placeholder="eg: 9876543210"/>
                                 </div>
                                 <div class="field-column">
                                     <p class="label">EMAIL</p>
-                                    <input class="small-input" type="email" placeholder="eg: abc@gmail.com"/>
+                                    <input required class="small-input" type="email" placeholder="eg: abc@gmail.com"/>
                                 </div>
                             </div>
                             <input type="submit" value="SUBMIT" class="btn"/>
@@ -91,30 +91,30 @@
                         <form id="one-way-trip" class="forms"  method="POST">
                             <div class="field">
                                 <p class="label">FROM</p>
-                                <input class="big-input" id="city" type="text" placeholder="From City"  list="cities" autocomplete="off"/>
+                                <input required class="big-input" id="city" type="text" placeholder="From City"  list="cities" autocomplete="off"/>
                             </div>
                             <div class="field">
                                 <p class="label">TO</p>
-                                <input class="big-input" id="city1" type="text" placeholder="To City"  list="cities" autocomplete="off"/>
+                                <input required class="big-input" id="city1" type="text" placeholder="To City"  list="cities" autocomplete="off"/>
                             </div>
                             <div class="row">
                                 <div class="field-column">
                                     <p class="label">DATE</p>
-                                    <input class="small-input date" type="date" />
+                                    <input required class="small-input date" type="date" />
                                 </div>
                                 <div class="field-column">
                                     <p class="label">PICK UP AT</p>
-                                    <input class="small-input time" type="time" />
+                                    <input required class="small-input time" type="time" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="field-column">
                                     <p class="label">PHONE NUMBER</p>
-                                    <input class="small-input" type="tel" placeholder="eg: 9876543210"/>
+                                    <input required class="small-input" type="tel" placeholder="eg: 9876543210"/>
                                 </div>
                                 <div class="field-column">
                                     <p class="label">EMAIL</p>
-                                    <input class="small-input" type="email" placeholder="eg: abc@gmail.com"/>
+                                    <input required class="small-input" type="email" placeholder="eg: abc@gmail.com"/>
                                 </div>
                             </div>
                             <input type="submit" value="SUBMIT" class="btn"/>
@@ -123,34 +123,34 @@
                         <form id="round-trip" class="forms"  method="POST">
                             <div class="field">
                                 <p class="label">FROM</p>
-                                <input class="big-input" id="city2" type="text" placeholder="From City" list="cities" autocomplete="off"/>
+                                <input required class="big-input" id="city2" type="text" placeholder="From City" list="cities" autocomplete="off"/>
                             </div>
                             <div class="field">
                                 <p class="label">TO</p>
-                                <input class="big-input" id="city3" type="text" placeholder="To City"  list="cities" autocomplete="off"/>
+                                <input required class="big-input" id="city3" type="text" placeholder="To City"  list="cities" autocomplete="off"/>
                             </div>
                             <div class="row">
                                 <div class="field-column">
                                     <p class="label">DATE</p>
-                                    <input class="small-input date" type="date"/>
+                                    <input required class="small-input date" type="date"/>
                                 </div>
                                 <div class="field-column">
                                     <p class="label">RETURN DATE</p>
-                                    <input class="small-input date" type="date" />
+                                    <input required class="small-input date" type="date" />
                                 </div>
                                 <div class="field-column">
                                     <p class="label">PICK UP AT</p>
-                                    <input class="small-input  time" type="time" />
+                                    <input required class="small-input  time" type="time" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="field-column">
                                     <p class="label">PHONE NUMBER</p>
-                                    <input class="contact-details small-input" type="tel" placeholder="eg: 9876543210"/>
+                                    <input required class="contact-details small-input" type="tel" placeholder="eg: 9876543210"/>
                                 </div>
                                 <div class="field-column">
                                     <p class="label">EMAIL</p>
-                                    <input class="contact-details small-input" type="email" placeholder="eg: abc@gmail.com"/>
+                                    <input required class="contact-details small-input" type="email" placeholder="eg: abc@gmail.com"/>
                                 </div>
                             </div>
                             <input type="submit" value="SUBMIT" class="btn"/>
@@ -283,10 +283,10 @@
                         <div class="column right">
                             <div class="form-wrap">
                                 <form id="contact-form" method="POST">
-                                    <input type="text" class="input" placeholder="Enter your name" />
-                                    <input type="email" class="input" placeholder="Enter email address" />
-                                    <input type="text" class="input" placeholder="Enter Subject" />
-                                    <textarea row="5" col="10" placeholder="Enter Message"></textarea>
+                                    <input required type="text" class="input" placeholder="Enter your name" />
+                                    <input required type="email" class="input" placeholder="Enter email address" />
+                                    <input required type="text" class="input" placeholder="Enter Subject" />
+                                    <textarea required row="5" col="10" placeholder="Enter Message"></textarea>
                                     <input class="btn" type="submit" value="Submit" />
                                 </form>
                             </div>
