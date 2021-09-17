@@ -55,7 +55,7 @@
                         <button class="round-trip tabs" onclick="changeActive('round-trip')"><i class="fas fa-arrows-alt-h" style="padding-right: 10px;"></i>Round Trip</button>
                     </div>
                     <div id="forms">
-                        <form id="local" class="forms">
+                        <form id="local" class="forms" method="POST">
                             <div class="field">
                                 <p class="label">FROM</p>
                                 <input class="big-input" id="cbe1" type="text" placeholder="From Area" autocomplete="off" list="cbe-area"/>
@@ -84,11 +84,11 @@
                                     <input class="small-input" type="email" placeholder="eg: abc@gmail.com"/>
                                 </div>
                             </div>
-                            <input type="button" value="SUBMIT" class="btn" onclick="openPopUp()"/>
+                            <input type="submit" value="SUBMIT" class="btn"/>
                         </form>
 
 
-                        <form id="one-way-trip" class="forms">
+                        <form id="one-way-trip" class="forms"  method="POST">
                             <div class="field">
                                 <p class="label">FROM</p>
                                 <input class="big-input" id="city" type="text" placeholder="From City"  list="cities" autocomplete="off"/>
@@ -117,10 +117,10 @@
                                     <input class="small-input" type="email" placeholder="eg: abc@gmail.com"/>
                                 </div>
                             </div>
-                            <input type="button" value="SUBMIT" class="btn" onclick="openPopUp()"/>
+                            <input type="submit" value="SUBMIT" class="btn"/>
                         </form>
 
-                        <form id="round-trip" class="forms">
+                        <form id="round-trip" class="forms"  method="POST">
                             <div class="field">
                                 <p class="label">FROM</p>
                                 <input class="big-input" id="city2" type="text" placeholder="From City" list="cities" autocomplete="off"/>
@@ -153,7 +153,7 @@
                                     <input class="contact-details small-input" type="email" placeholder="eg: abc@gmail.com"/>
                                 </div>
                             </div>
-                            <input type="button" value="SUBMIT" class="btn" onclick="openPopUp()"/>
+                            <input type="submit" value="SUBMIT" class="btn"/>
                         </form>
                         <template id="template">
                             
@@ -282,12 +282,12 @@
                         </div>
                         <div class="column right">
                             <div class="form-wrap">
-                                <form id="contact-form">
+                                <form id="contact-form" method="POST">
                                     <input type="text" class="input" placeholder="Enter your name" />
                                     <input type="email" class="input" placeholder="Enter email address" />
                                     <input type="text" class="input" placeholder="Enter Subject" />
                                     <textarea row="5" col="10" placeholder="Enter Message"></textarea>
-                                    <input class="btn" type="button" value="Submit" onclick="openPopUp()"/>
+                                    <input class="btn" type="submit" value="Submit" />
                                 </form>
                             </div>
                         </div>
