@@ -199,9 +199,9 @@ document.querySelector("#contact-form").addEventListener("submit", async (e) =>{
     var form = e["path"][0]
     var name = form[0].value;
     var mail = form[1].value;
-    var subject = form[2].value;
+    var number = form[2].value;
     var message = form[3].value;
-    xhr.send(`name=${name}&email=${mail}&subject=${subject}&message=${message}`);
+    xhr.send(`name=${name}&email=${mail}&number=${number}&message=${message}`);
     setTimeout(function(){
         document.querySelector(".popup").classList.add("active");
         document.querySelector(".body").classList.add("blur");
